@@ -1,42 +1,67 @@
-import {
-  MainContainer,
-  FormContainer,
-  ContactsContainer,
-  Title,
-  TitleContacts,
-} from './App.styled';
-import { useDispatch, useSelector } from 'react-redux';
+// import {
+//   MainContainer,
+//   FormContainer,
+//   ContactsContainer,
+//   Title,
+//   TitleContacts,
+// } from './App.styled';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCurrentUser } from 'redux/operations';
-import { getError, getIsLoading } from 'redux/selectors';
-import ContactForm from './ContactForm/ContactForm';
-import ContactsList from './ContactsList/contactslist';
-import Filter from './Filter/Filter';
-import Loader from './Loader/Loader';
-import AppBar from './UserMenu/AppBar';
+//import { getError, getIsLoading } from 'redux/selectors';
+import { Routes, Route } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
+//import ContactForm from './ContactForm/ContactForm';
+//import ContactsList from './ContactsList/contactslist';
+//import Filter from './Filter/Filter';
+//import Loader from './Loader/Loader';
+import AppBar from './AppBar';
+import HomeView from '../views/HomeView';
+import RegisterView from 'views/RegisterView';
+import LoginView from '../views/LoginView';
+import ContactsView from '../views/ContactsView';
 
 export default function App() {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
+  //const isLoading = useSelector(getIsLoading);
+  //const error = useSelector(getError);
 
   useEffect(() => {
     dispatch(fetchCurrentUser());
   }, [dispatch]);
 
   return (
-    <MainContainer>
-      <AppBar />
-      <FormContainer>
-        <Title>Phonebook</Title>
-        <ContactForm />
-      </FormContainer>
-      <ContactsContainer>
-        <TitleContacts>Contacts</TitleContacts>
-        <Filter />
-        <ContactsList />
-        {isLoading && !error && <Loader />}
-      </ContactsContainer>
-    </MainContainer>
+    <>
+      <Routes>
+        <Route path="/" element={<AppBar />}>
+          <Route index element={<HomeView />} />
+          <Route
+            path="register"
+            element={
+              <PublicRoute>
+                <RegisterView />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <PublicRoute>
+                <LoginView />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="contacts"
+            element={
+              <PrivateRoute>
+                <ContactsView />
+              </PrivateRoute>
+            }
+          />
+        </Route>
+      </Routes>
+    </>
   );
 }

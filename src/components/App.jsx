@@ -7,7 +7,7 @@ import {
 } from './App.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
+import { fetchCurrentUser } from 'redux/operations';
 import { getError, getIsLoading } from 'redux/selectors';
 import ContactForm from './ContactForm/ContactForm';
 import ContactsList from './ContactsList/contactslist';
@@ -21,7 +21,7 @@ export default function App() {
   const error = useSelector(getError);
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(fetchCurrentUser());
   }, [dispatch]);
 
   return (

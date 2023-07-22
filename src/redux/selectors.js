@@ -7,3 +7,5 @@ export const getFilteredContacts = ({ contacts: { contacts }, filter }) => {
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 };
+export const getIsLoggedIn = state => state.auth.isLoggedIn;
+export const getUserName = state => state.auth.user.name;

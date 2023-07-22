@@ -21,7 +21,11 @@ const authSlice = createSlice({
   initialState,
   extraReducers: {
     [registerContact.pending]: onPending,
-    [registerContact.fulfilled](state, action) {},
+    [registerContact.fulfilled](state, action) {
+      state.user = action.payload.user;
+      state.token = action.payload.token;
+      state.isLoggedIn = true;
+    },
     [registerContact.rejected]: onRejected,
   },
 });

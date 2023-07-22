@@ -13,6 +13,7 @@ import ContactForm from './ContactForm/ContactForm';
 import ContactsList from './ContactsList/contactslist';
 import Filter from './Filter/Filter';
 import Loader from './Loader/Loader';
+import AppBar from './UserMenu/AppBar';
 
 export default function App() {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ export default function App() {
 
   return (
     <MainContainer>
+      <AppBar />
       <FormContainer>
         <Title>Phonebook</Title>
         <ContactForm />

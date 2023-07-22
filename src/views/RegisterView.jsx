@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { registerContact } from '../redux/operations';
 
 export default function RegisterView() {
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

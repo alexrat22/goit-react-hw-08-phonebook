@@ -38,7 +38,9 @@ const authSlice = createSlice({
 
     [logOut.pending]: onPending,
     [logOut.fulfilled](state) {
-      state = initialState;
+      state.user = { name: null, email: null };
+      state.token = null;
+      state.isLoggedIn = false;
     },
     [logOut.rejected]: onRejected,
   },

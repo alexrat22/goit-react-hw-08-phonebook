@@ -9,7 +9,7 @@ export default function RegisterView() {
   const [password, setPassword] = useState('');
 
   const onChange = evt => {
-    const { name, value } = evt.current.target;
+    const { name, value } = evt.currentTarget;
 
     switch (name) {
       case 'name':
@@ -40,7 +40,7 @@ export default function RegisterView() {
   return (
     <form onSubmit={onSubmit}>
       <div>
-        <label htmlFor="name">Name</label>
+        <label>Name</label>
         <input
           value={name}
           onChange={onChange}
@@ -51,7 +51,7 @@ export default function RegisterView() {
         />
       </div>
       <div>
-        <label htmlFor="email">Email</label>
+        <label>Email</label>
         <input
           value={email}
           onChange={onChange}
@@ -62,7 +62,7 @@ export default function RegisterView() {
         />
       </div>
       <div>
-        <label htmlFor="password">Password</label>
+        <label>Password</label>
         <input
           value={password}
           onChange={onChange}

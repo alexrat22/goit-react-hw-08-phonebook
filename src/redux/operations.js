@@ -65,7 +65,7 @@ export const registerContact = createAsyncThunk(
 );
 
 export const logIn = createAsyncThunk(
-  'auth/register',
+  'auth/login',
   async (credentials, thunkAPI) => {
     try {
       const response = await axios.post(`/users/login`, credentials);

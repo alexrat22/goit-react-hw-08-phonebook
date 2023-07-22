@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer } from 'redux-persist';
-import { registerContact, logIn, logOut } from './operations';
+import { registerContact, logIn, logOut, fetchCurrentUser } from './operations';
 
 const initialState = {
   user: { name: null, email: null },
@@ -45,6 +45,11 @@ const authSlice = createSlice({
       state.isLoggedIn = false;
     },
     [logOut.rejected]: onRejected,
+
+    [fetchCurrentUser.fulfilled](state, action) {
+      state.user = action.payload;
+      state.isLoggedIn = true;
+    },
   },
 });
 

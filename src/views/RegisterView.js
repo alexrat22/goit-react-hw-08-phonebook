@@ -39,33 +39,39 @@ export default function RegisterView() {
 
   return (
     <form onSubmit={onSubmit}>
-      <label htmlFor="name">Name</label>
-      <input
-        value={name}
-        onChange={onChange}
-        type="text"
-        name="name"
-        id="name"
-        required
-      />
-      <label htmlFor="email">Email</label>
-      <input
-        value={email}
-        onChange={onChange}
-        type="email"
-        name="email"
-        id="email"
-        required
-      />
-      <label htmlFor="password">Password</label>
-      <input
-        value={password}
-        onChange={onChange}
-        type="password"
-        name="password"
-        id="password"
-        required
-      />
+      <div>
+        <label htmlFor="name">Name</label>
+        <input
+          value={name}
+          onChange={onChange}
+          type="text"
+          name="name"
+          id="name"
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Email</label>
+        <input
+          value={email}
+          onChange={onChange}
+          type="email"
+          name="email"
+          id="email"
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="password">Password</label>
+        <input
+          value={password}
+          onChange={onChange}
+          type="password"
+          name="password"
+          id="password"
+          required
+        />
+      </div>
       <button type="submit">Register</button>
     </form>
   );

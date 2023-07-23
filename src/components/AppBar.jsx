@@ -12,6 +12,7 @@ export default function AppBar() {
       <nav>
         <div>
           <NavLink to="/">Home</NavLink>
+          {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
           {isLoggedIn ? <UserMenu /> : <AuthNav />}
         </div>
       </nav>

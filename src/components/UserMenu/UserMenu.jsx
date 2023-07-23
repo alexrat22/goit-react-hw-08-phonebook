@@ -8,7 +8,7 @@ export default function UserMenu() {
 
   return (
     <>
-      <p>{userName}</p>
+      <p>Welcome, {userName}!</p>
       <button type="button" onClick={() => dispatch(logOut())}>
         LogOut
       </button>

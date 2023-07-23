@@ -1,3 +1,3 @@
 export default function HomeView() {
-  <div>Home</div>;
+  return <div>Home</div>;
 }

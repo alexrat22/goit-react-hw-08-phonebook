@@ -16,5 +16,5 @@ export const Image = styled.img`
   display: block;
   width: 300px;
   margin: 30px auto 10px auto;
-  border-radius: 4px;
+  border-radius: 8px;
 `;

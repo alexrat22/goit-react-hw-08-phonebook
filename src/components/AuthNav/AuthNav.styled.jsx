@@ -10,10 +10,16 @@ export const AuthContainer = styled.div`
 export const NavLinkReg = styled(NavLink)`
   text-decoration: none;
   color: #fff;
+
+  &.active {
+    color: tomato; 
 `;
 
 export const NavLinkLog = styled(NavLink)`
   text-decoration: none;
   color: #fff;
   margin: 0 30px;
+
+  &.active {
+    color: tomato; 
 `;

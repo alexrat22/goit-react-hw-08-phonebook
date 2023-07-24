@@ -20,10 +20,17 @@ export const NavLinkHome = styled(NavLink)`
   color: #fff;
   text-decoration: none;
   margin: 0 20px;
+
+  &.active {
+    color: #ef0060;
+  }
 `;
 
 export const NavLinkContacts = styled(NavLink)`
   font-weight: 600;
   color: #fff;
   text-decoration: none;
+
+  &.active {
+    color: tomato;    
 `;

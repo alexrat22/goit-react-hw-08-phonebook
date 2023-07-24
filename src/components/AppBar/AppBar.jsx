@@ -14,15 +14,17 @@ export default function AppBar() {
   const isLoggedIn = useSelector(getIsLoggedIn);
   return (
     <>
-      <Header>
-        <NavigationMenu>
-          <NavLinkHome to="/">Home</NavLinkHome>
-          {isLoggedIn && (
-            <NavLinkContacts to="/contacts">Contacts</NavLinkContacts>
-          )}
-        </NavigationMenu>
-        {isLoggedIn ? <UserMenu /> : <AuthNav />}
-      </Header>
+      <nav>
+        <Header>
+          <NavigationMenu>
+            <NavLinkHome to="/">Home</NavLinkHome>
+            {isLoggedIn && (
+              <NavLinkContacts to="/contacts">Contacts</NavLinkContacts>
+            )}
+          </NavigationMenu>
+          {isLoggedIn ? <UserMenu /> : <AuthNav />}
+        </Header>
+      </nav>
       <div>
         <Outlet />
       </div>

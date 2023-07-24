@@ -19,7 +19,7 @@ export const NavLinkHome = styled(NavLink)`
   font-weight: 600;
   color: #fff;
   text-decoration: none;
-  margin: 0 20px;
+  margin: 0 30px;
 
   &.active {
     color: tomato;

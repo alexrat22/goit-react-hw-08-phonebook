@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   width: 400px;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
   padding: 30px;
-  margin: 100px auto;
+  margin: 80px auto;
   text-align: center;
   border-radius: 8px;
   color: #fff;
@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const Image = styled.img`
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 300px;
   margin: 30px auto 10px auto;
+  border-radius: 4px;
 `;

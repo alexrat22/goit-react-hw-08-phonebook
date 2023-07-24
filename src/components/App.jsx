@@ -1,22 +1,10 @@
-// import {
-//   MainContainer,
-//   FormContainer,
-//   ContactsContainer,
-//   Title,
-//   TitleContacts,
-// } from './App.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCurrentUser } from 'redux/operations';
-//import { getError, getIsLoading } from 'redux/selectors';
 import { Routes, Route } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
-//import ContactForm from './ContactForm/ContactForm';
-//import ContactsList from './ContactsList/contactslist';
-//import Filter from './Filter/Filter';
-//import Loader from './Loader/Loader';
-import AppBar from './AppBar';
+import AppBar from './AppBar/AppBar';
 import HomeView from '../views/HomeView';
 import RegisterView from 'views/RegisterView';
 import LoginView from '../views/LoginView';
@@ -26,8 +14,6 @@ import { getIsFetchingCurrent } from 'redux/selectors';
 export default function App() {
   const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(getIsFetchingCurrent);
-  //const isLoading = useSelector(getIsLoading);
-  //const error = useSelector(getError);
 
   useEffect(() => {
     dispatch(fetchCurrentUser());

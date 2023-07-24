@@ -5,10 +5,11 @@ export default function Loader() {
   return (
     <div className={css.Loader}>
       <BallTriangle
-        height={100}
-        width={100}
-        radius={5}
-        color="#4fa94d"
+        height={200}
+        width={200}
+        radius={7}
+        // color="#4fa94d"
+        color="rgba(86, 141, 229, 1)"
         ariaLabel="ball-triangle-loading"
         wrapperClass={{}}
         wrapperStyle=""

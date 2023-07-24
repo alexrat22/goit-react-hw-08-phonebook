@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
-import AuthNav from './AuthNav';
-import UserMenu from './UserMenu/UserMenu';
+import AuthNav from '../AuthNav/AuthNav';
+import UserMenu from '../UserMenu/UserMenu';
 import { getIsLoggedIn } from 'redux/selectors';
 import {
   Header,

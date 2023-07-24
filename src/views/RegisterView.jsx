@@ -60,7 +60,7 @@ export default function RegisterView() {
         value={password}
         onChange={onChange}
         name="password"
-        placeholder="Password"
+        placeholder="Password (min 7 symbols)"
         required
       />
 

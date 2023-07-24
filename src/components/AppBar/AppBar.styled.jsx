@@ -22,7 +22,7 @@ export const NavLinkHome = styled(NavLink)`
   margin: 0 20px;
 
   &.active {
-    color: #ef0060;
+    color: tomato;
   }
 `;
 

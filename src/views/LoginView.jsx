@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/operations';
-import { Form, Label } from './LoginView.styled';
+import { Form, Input, Button } from './LoginView.styled';
 
 export default function LoginView() {
   const [email, setEmail] = useState('');
@@ -37,29 +37,23 @@ export default function LoginView() {
   return (
     <form onSubmit={onSubmit}>
       <Form>
-        <div>
-          <Label>Email</Label>
-          <input
-            value={email}
-            onChange={onChange}
-            type="email"
-            name="email"
-            id="email"
-            required
-          />
-        </div>
-        <div>
-          <Label>Password</Label>
-          <input
-            value={password}
-            onChange={onChange}
-            type="password"
-            name="password"
-            id="password"
-            required
-          />
-        </div>
-        <button type="submit">LogIn</button>
+        <Input
+          value={email}
+          onChange={onChange}
+          name="email"
+          placeholder="Email"
+          required
+        />
+
+        <Input
+          value={password}
+          onChange={onChange}
+          name="password"
+          placeholder="Password"
+          required
+        />
+
+        <Button type="submit">LogIn</Button>
       </Form>
     </form>
   );

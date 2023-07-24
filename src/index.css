@@ -7,7 +7,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(203, 220, 247);
+  background: linear-gradient(to right, #2e2f42b3, #2e2f42b3),
+    url('./images/Image-body.jpg');
+  background-size: cover;
 }
 
 code {

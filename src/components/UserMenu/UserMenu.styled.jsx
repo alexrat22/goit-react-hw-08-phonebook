@@ -9,11 +9,9 @@ export const UserText = styled.p`
   display: flex;
   margin: auto, 0;
   font-size: 20px;
+  font-weight: 600;
+  color: #fff;
 `;
-export const Span = styled.p`
-  margin: 0;
-`;
-
 export const Button = styled.button`
   padding: 5px 20px;
   margin: 20px 20px;

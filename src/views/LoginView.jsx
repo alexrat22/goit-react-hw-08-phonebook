@@ -35,26 +35,24 @@ export default function LoginView() {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <Form>
-        <Input
-          value={email}
-          onChange={onChange}
-          name="email"
-          placeholder="Email"
-          required
-        />
+    <Form onSubmit={onSubmit}>
+      <Input
+        value={email}
+        onChange={onChange}
+        name="email"
+        placeholder="Email"
+        required
+      />
 
-        <Input
-          value={password}
-          onChange={onChange}
-          name="password"
-          placeholder="Password"
-          required
-        />
+      <Input
+        value={password}
+        onChange={onChange}
+        name="password"
+        placeholder="Password"
+        required
+      />
 
-        <Button type="submit">LogIn</Button>
-      </Form>
-    </form>
+      <Button type="submit">LogIn</Button>
+    </Form>
   );
 }

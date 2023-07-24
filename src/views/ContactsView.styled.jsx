@@ -8,9 +8,18 @@ export const MainContainer = styled.div`
 
 export const FormContainer = styled.div`
   width: 310px;
-  margin-right: auto;
-  margin-left: auto;
-  border-bottom: 3px solid rgba(86, 141, 229, 1);
+  margin: 0 auto;
+  padding: 5px 20px;
+  border-radius: 8px;
+  background-color: rgba(225, 225, 225, 0.8);
+`;
+
+export const Container = styled.div`
+  width: 310px;
+  margin: 0 auto;
+  padding: 5px 20px 20px;
+  border-radius: 8px;
+  background-color: rgba(225, 225, 225, 0.8);
 `;
 
 export const ContactsContainer = styled.div`

@@ -4,7 +4,7 @@ export default function AuthNav() {
   return (
     <AuthContainer>
       <NavLinkReg to="/register">Register</NavLinkReg>
-      <NavLinkLog to="/login">Login</NavLinkLog>
+      <NavLinkLog to="/login">LogIn</NavLinkLog>
     </AuthContainer>
   );
 }

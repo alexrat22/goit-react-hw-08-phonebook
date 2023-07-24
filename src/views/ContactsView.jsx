@@ -10,6 +10,7 @@ import {
   MainContainer,
   FormContainer,
   ContactsContainer,
+  Container,
   Title,
   TitleContacts,
 } from './ContactsView.styled';
@@ -26,12 +27,14 @@ export default function ContactsView() {
   return (
     <MainContainer>
       <FormContainer>
-        <Title>Phonebook</Title>
+        <Title>New Contact</Title>
         <ContactsForm />
       </FormContainer>
       <ContactsContainer>
-        <TitleContacts>Contacts</TitleContacts>
-        <Filter />
+        <Container>
+          <TitleContacts>Contacts</TitleContacts>
+          <Filter />
+        </Container>
         <ContactsList />
         {isLoading && !error && <Loader />}
       </ContactsContainer>

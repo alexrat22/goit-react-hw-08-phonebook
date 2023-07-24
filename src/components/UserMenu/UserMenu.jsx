@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from 'redux/operations';
 import { getUserName } from 'redux/selectors';
-import { User, UserText, Span, Button } from './UserMenu.styled';
+import { User, UserText, Button } from './UserMenu.styled';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
@@ -9,10 +9,7 @@ export default function UserMenu() {
 
   return (
     <User>
-      <UserText>
-        <Span>Welcome, &nbsp;</Span>
-        {userName}!
-      </UserText>
+      <UserText>{userName}</UserText>
       <Button type="button" onClick={() => dispatch(logOut())}>
         LogOut
       </Button>

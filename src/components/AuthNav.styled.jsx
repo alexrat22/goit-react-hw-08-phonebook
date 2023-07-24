@@ -3,14 +3,17 @@ import { NavLink } from 'react-router-dom';
 
 export const AuthContainer = styled.div`
   font-size: 20px;
+  font-weight: 600;
   padding: 20px 0;
 `;
 
 export const NavLinkReg = styled(NavLink)`
   text-decoration: none;
+  color: #fff;
 `;
 
 export const NavLinkLog = styled(NavLink)`
   text-decoration: none;
+  color: #fff;
   margin: 0 30px;
 `;
